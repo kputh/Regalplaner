@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MobileApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_title">Menü</string>
+    <string name="menu_newProject">Neuen Bohrplan anlegen</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="title_activity_settings">Einstellungen</string>
+    <string name="title_activity_wall_properties">WallPropertiesActivity</string>
+    <string name="wall_title">Eigenschaften der Wand</string>
+    <string name="wall_material">Material</string>
+
+    <string-array name="wall_materials">
+        <item>Beton</item>
+        <item>Rigibs</item>
+        <item>Holzziegel</item>
+    </string-array>
+
+    <string name="wall_thickness">Dicke der Wand</string>
+    <string name="wall_thickness_hint">Dicke der Wand in cm eingeben.</string>
+    <string name="button_next">Weiter</string>
+    <string name="title_activity_general_shelf_properties">GeneralShelfPropertiesActivity</string>
+    <string name="shelf_title">Regaleigenschaften</string>
+    <string name="shelf_weight_hint">Gewicht des Regals in kg</string>
+    <string name="shelf_bearing_load">Maximale Traglast in kg</string>
+    <string name="title_activity_square_shelf_properties">SquareShelfPropertiesActivity</string>
+    <string name="title_activity_rectangular_shelf_properties">RectangularShelfPropertiesActivity</string>
+    <string name="title_activity_round_shelf_properties">RoundShelfPropertiesActivity</string>
+    <string name="title_activity_oval_shelf_properties">OvalShelfPropertiesActivity</string>
+    <string name="shelf_size">Größe des Regals</string>
+    <string name="shelf_radius">Radius</string>
+    <string name="shelf_radius_hint">Radius in cm eingeben.</string>
+    <string name="shelf_edge_length">Kantenlänge</string>
+    <string name="shelf_edge_length_hint">Kantenlänge in cm eingeben.</string>
+    <string name="shelf_width">Breite</string>
+    <string name="shelf_width_hint">Breite in cm eingeben.</string>
+    <string name="shelf_height">Höhe</string>
+    <string name="shelf_height_hint">Höhe in cm eingeben.</string>
+    <string name="preferences_title">Einstellungen</string><string name="preferences_default_length">10.0</string><string name="preferences_width">Breite</string><string name="preferences_width_summary">Breite des Referenzobjekts</string>
+    
+    
+    <string name="preferences_height">Höhe</string>
+    <string name="preferences_height_summary">Höhe des Referenzobjekts</string>
+    <string name="preferences_depth">Tiefe</string>
+    <string name="preferences_depth_summary">Tiefe des Referenzobjekts</string>
+    
+
+</resources>

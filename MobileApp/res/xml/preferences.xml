@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditTextPreference android:summary="@string/preferences_width_summary" android:key="reference_width" android:title="@string/preferences_width" android:defaultValue="@string/preferences_default_length"/>
+    <EditTextPreference android:key="reference_height" android:title="@string/preferences_height" android:defaultValue="@string/preferences_default_length" android:summary="@string/preferences_height_summary"/>
+    <EditTextPreference android:key="reference_depth" android:title="@string/preferences_depth" android:defaultValue="@string/preferences_default_length" android:summary="@string/preferences_depth_summary"/>
+    
+
+</PreferenceScreen>
