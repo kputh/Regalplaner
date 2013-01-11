@@ -21,6 +21,12 @@ public class MenuActivity extends Activity {
         return true;
     }
     
+    public void createProject(View view) {
+    	
+    	Intent intent = new Intent(this, WallPropertiesActivity.class);
+    	startActivity(intent);
+    }
+    
     /** Called when the user touches the button */
     public void showSettings(View view) {
     	

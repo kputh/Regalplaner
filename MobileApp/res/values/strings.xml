@@ -39,11 +39,18 @@
     <string name="shelf_height_hint">Höhe in cm eingeben.</string>
     <string name="preferences_title">Einstellungen</string><string name="preferences_default_length">10.0</string><string name="preferences_width">Breite</string><string name="preferences_width_summary">Breite des Referenzobjekts</string>
     
-    
     <string name="preferences_height">Höhe</string>
     <string name="preferences_height_summary">Höhe des Referenzobjekts</string>
     <string name="preferences_depth">Tiefe</string>
     <string name="preferences_depth_summary">Tiefe des Referenzobjekts</string>
+    
+    <string-array name="shelf_shapes">
+        <item>rund</item>
+        <item>oval</item>
+        <item>quadratisch</item>
+        <item>rechteckig</item>
+    </string-array>
+        <string name="shelf_shapes_prompt">Regalform wählen</string>
     
 
 </resources>
