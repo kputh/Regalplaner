@@ -4,7 +4,7 @@
 package de.htw_berlin.ar.data;
 
 /**
- * eine Wand
+ * a wall
  * 
  * @author Kai Puth
  *
@@ -12,13 +12,22 @@ package de.htw_berlin.ar.data;
 public class Wall {
 	
 	/**
-	 *  Dicke der Wand in cm
+	 *  thickness of the wall in cm
 	 */
 	public float thickness;
 	
 	/**
-	 * Material der Wand
+	 * the material, the wall is made from
 	 */
 	public Material material;
+	
+	/**
+	 * constructor
+	 */
+	public Wall() {
+		
+		this.thickness = 20;
+		this.material = Material.CONCRETE;
+	}
 
 }

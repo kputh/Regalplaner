@@ -4,7 +4,7 @@
 package de.htw_berlin.ar.data;
 
 /**
- * ein rechteckiges Regal.
+ * a rectangular shelf
  * 
  * @author Kai Puth
  *
@@ -12,13 +12,24 @@ package de.htw_berlin.ar.data;
 public class RectangularShelf extends Shelf {
 	
 	/**
-	 * die Breite des Regals in cm.
+	 * the height of the shelf in cm
 	 */
 	public float height;
 	
 	/**
-	 * die Höhe des Regals in cm.
+	 * the width of the shelf in cm
 	 */
 	public float width;
+	
+	/**
+	 * constructor
+	 */
+	public RectangularShelf() {
+		
+		super();
+		
+		this.height = defaultLength;
+		this.width = defaultLength;
+	}
 
 }

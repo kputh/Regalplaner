@@ -6,7 +6,7 @@ package de.htw_berlin.ar.data;
 import android.graphics.Bitmap;
 
 /**
- * ein Projekt. Führt alle Daten für ein Regalprojekt zusammen.
+ * this object ties all relevant data for a shelf and wall together
  * 
  * @author Kai Puth
  *
@@ -14,38 +14,49 @@ import android.graphics.Bitmap;
 public class Project {
 	
 	/**
-	 * das ursprüngliche Bild der Wand mit dem Referenzobjekt.
+	 * the image of the wall and reference object
 	 */
 	public Bitmap originalImage;
 	
 	/**
-	 * die Gesamtansicht des Bohrplans.
+	 * the full view of the result
 	 */
 	public Bitmap fullResults;
 	
 	/**
-	 * die Detailansicht des Bohrplans.
+	 * the detail view of the result
 	 */
 	public Bitmap detailResults;
 	
 	/**
-	 * Liste mit Empfehlungen für die Dübel.
+	 * a list of recommended dowels
 	 */
 	public Bitmap dowelOverview;
 	
 	/**
-	 * das Referenzobjekt im Bild.
+	 * the reference object in the image
 	 */
 	public ReferenceObject reference;
 	
 	/**
-	 * das aufzuhängende Regal.
+	 * the shelf to be put on the wall
 	 */
 	public Shelf shelf;
 	
 	/**
-	 * die Wand.
+	 * the wall
 	 */
 	public Wall wall;
+	
+	/**
+	 * constructor
+	 */
+	public Project() {
+		
+		// ToDo: get reference object
+		
+		this.shelf = new Shelf();
+		this.wall = new Wall();
+	}
 
 }

@@ -4,7 +4,7 @@
 package de.htw_berlin.ar.data;
 
 /**
- * ein ovales Regal.
+ * an oval shelf
  * 
  * @author Kai Puth
  *
@@ -12,12 +12,23 @@ package de.htw_berlin.ar.data;
 public class OvalShelf extends Shelf {
 
 	/**
-	 * der horizontale Radius des Regals.
+	 * the horizontal radius of the shelf in cm
 	 */
 	public float horizontalRadius;
 	
 	/**
-	 * der vertikale Radius des Regals.
+	 * the vertical radius of the shelf in cm
 	 */
 	public float verticalRadius;
+	
+	/**
+	 * constructor
+	 */
+	public OvalShelf() {
+		
+		super();
+		
+		this.horizontalRadius = defaultLength;
+		this.verticalRadius = defaultLength;
+	}
 }

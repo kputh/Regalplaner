@@ -4,7 +4,7 @@
 package de.htw_berlin.ar.data;
 
 /**
- * ein Regal
+ * a shelf
  * 
  * @author Kai Puth
  *
@@ -12,12 +12,26 @@ package de.htw_berlin.ar.data;
 public class Shelf {
 	
 	/**
-	 * Gewicht des Regals in kg
+	 * the default length of each edge
+	 */
+	protected static final float defaultLength = 30; 
+	
+	/**
+	 * weight of the shelf in kg
 	 */
 	public float weight;
 	
 	/**
-	 * maximale Traglast des Regals in kg
+	 * maximum load in kg
 	 */
 	public float maxBearingLoad;
+	
+	/**
+	 * constructor
+	 */
+	public Shelf() {
+		
+		this.weight = 2;
+		this.maxBearingLoad = 10;
+	}
 }

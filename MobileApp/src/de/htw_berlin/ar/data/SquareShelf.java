@@ -4,7 +4,7 @@
 package de.htw_berlin.ar.data;
 
 /**
- * ein quadratisches Regal bzw. ein Regal gleicher Höhe und Breite.
+ * a square shelf
  * 
  * @author Kai Puth
  *
@@ -12,7 +12,17 @@ package de.htw_berlin.ar.data;
 public class SquareShelf extends Shelf {
 
 	/**
-	 * die Seitenlänge des Regals in cm.
+	 * edge length in cm
 	 */
 	public float length;
+	
+	/**
+	 * constructor
+	 */
+	public SquareShelf() {
+		
+		super();
+		
+		this.length = defaultLength;
+	}
 }

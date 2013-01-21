@@ -4,31 +4,44 @@
 package de.htw_berlin.ar.data;
 
 /**
- * Das Referenzobjekt im Bild
+ * the reference object in the image
  * 
  * @author Kai Puth
  *
  */
 public class ReferenceObject {
 	
+	private static final float defaultLength = 20;
+	private static final int defaultColor = 0xFF00000;
+	
 	/**
-	 * Höhe in cm
+	 * height in cm
 	 */
 	public float height;
 	
 	/**
-	 * Breite in cm
+	 * width in cm
 	 */
 	public float width;
 	
 	/**
-	 * Abstand von der Vorderseite zur Wand (Tiefe) in cm
+	 * the distance from the reference object's face to the wall in cm
 	 */
 	public float depth;
 	
 	/**
-	 * Farbe der Frontseite als RGB-Wert
+	 * color of the reference object's face as an RGB value
 	 */
 	public int color;
-
+	
+	/**
+	 * constructor
+	 */
+	public ReferenceObject() {
+		
+		this.height = defaultLength;
+		this.width = defaultLength;
+		this.depth = defaultLength;
+		this.color = defaultColor;
+	}
 }

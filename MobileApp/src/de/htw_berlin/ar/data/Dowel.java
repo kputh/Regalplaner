@@ -4,7 +4,7 @@
 package de.htw_berlin.ar.data;
 
 /**
- * ein Dübel
+ * a dowel
  * 
  * @author Kai Puth
  *
@@ -12,23 +12,48 @@ package de.htw_berlin.ar.data;
 public class Dowel {
 	
 	/**
-	 *  maximale Last des Dübels in kg
+	 *  maximum load of the dowel in kg
 	 */
-	public float load;
+	public final float load;
 	
 	/**
-	 *  geeignet für diese Materialien
+	 *  this dowel is suited for this material only
 	 */
-	public Material material;
+	public final Material material;
 	
 	/**
-	 * Abstand zum nächsten Dübel in cm
+	 * distance to the next dowel in cm
 	 */
-	public float distanceToNext;
+	public final float distanceToNext;
 	
 	/**
-	 * Abstand zur Wandkante in cm
+	 * distance to the wall in cm
 	 */
-	public float distanceToWall;
+	public final float distanceToWall;
+	
+	/**
+	 * constructor
+	 */
+	public Dowel(float load, Material material, float distToNext, float distToWall) {
+		
+		this.load = load;
+		this.material = material;
+		this.distanceToNext = distToNext;
+		this.distanceToWall = distToWall;
+	}
+
+	/*
+	public float getLoad() { return this.load; }
+	public void setLoad(float load) { this.load = load; }
+	
+	public Material getMaterial() { return this.material; }
+	public void setMaterial(Material material) { this.material = material; }
+	
+	public float getDistanceToNext() { return this.distanceToNext; }
+	public void setDistanceToNext(float distance) { this.distanceToNext = distance; }
+	
+	public float getDistanceToWall() { return this.distanceToWall; }
+	public void setDistanceToWall(float distance) { this.distanceToWall = distance; }
+	*/
 
 }

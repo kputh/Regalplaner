@@ -4,7 +4,7 @@
 package de.htw_berlin.ar.data;
 
 /**
- * ein rundes Regal.
+ * a round shelf
  * 
  * @author Kai Puth
  *
@@ -12,7 +12,17 @@ package de.htw_berlin.ar.data;
 public class RoundShelf extends Shelf {
 
 	/**
-	 * der äußere Radius des Regals in cm.
+	 * radius of the shelf in cm
 	 */
 	public float radius;
+	
+	/**
+	 * constructor
+	 */
+	public RoundShelf() {
+		
+		super();
+		
+		this.radius = defaultLength;
+	}
 }
