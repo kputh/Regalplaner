@@ -9,7 +9,7 @@ package de.htw_berlin.ar.data;
  * @author Kai Puth
  *
  */
-public class RefernceObject {
+public class ReferenceObject {
 	
 	/**
 	 * Höhe in cm
