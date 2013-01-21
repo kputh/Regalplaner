@@ -6,16 +6,20 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 public class WallPropertiesActivity extends Activity {
+	
+	public final static String EXTRA_WALL_MATERIAL = "de.htw_berlin.ar.wall.material";
+	public final static String EXTRA_WALL_THICKNESS = "de.htw_berlin.ar.wall.thickness";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_wall_properties);
 		
-		Spinner spinner = (Spinner) findViewById(R.id.spinner1);
+		Spinner spinner = (Spinner) findViewById(R.id.material_spinner);
 		// Create an ArrayAdapter using the string array and a default spinner layout
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 		        R.array.wall_materials, android.R.layout.simple_spinner_item);
@@ -34,7 +38,15 @@ public class WallPropertiesActivity extends Activity {
 	
 	public void nextScreen(View view) {
 		
+		Spinner materialSpinner = (Spinner) findViewById(R.id.material_spinner);
+		int material = materialSpinner.getSelectedItemPosition();
+
+		EditText thicknessText = (EditText) findViewById(R.id.thicknessText);
+		float thickness = Float.parseFloat(thicknessText.getText().toString());
+		
     	Intent intent = new Intent(this, GeneralShelfPropertiesActivity.class);
+    	intent.putExtra(EXTRA_WALL_MATERIAL, material);
+    	intent.putExtra(EXTRA_WALL_THICKNESS, thickness);
     	startActivity(intent);
 	}
 

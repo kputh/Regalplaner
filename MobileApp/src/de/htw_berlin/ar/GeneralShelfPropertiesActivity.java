@@ -1,5 +1,6 @@
 package de.htw_berlin.ar;
 
+import de.htw_berlin.ar.data.Shape;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -8,11 +9,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 public class GeneralShelfPropertiesActivity extends Activity implements OnItemSelectedListener {
 	
-	private enum Shape { ROUND, SQUARE, OVAL, RECTANGULAR, NULL }
+	public final static String EXTRA_SHELF_SHAPE = "de.htw_berlin.ar.shelf.shape";
+	public final static String EXTRA_SHELF_WEIGHT = "de.htw_berlin.ar.shelf.weight";
+	public final static String EXTRA_SHELF_LOAD = "de.htw_berlin.ar.shelf.load";
+
+	public final static String EXTRA_SHELF_HEIGHT = "de.htw_berlin.ar.shelf.height";
+	public final static String EXTRA_SHELF_WIDTH = "de.htw_berlin.ar.shelf.width";
+	public final static String EXTRA_SHELF_LENGTH = "de.htw_berlin.ar.shelf.length";
+
 	private Shape shape;
 
 	@Override
@@ -20,7 +29,7 @@ public class GeneralShelfPropertiesActivity extends Activity implements OnItemSe
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_general_shelf_properties);
 
-		Spinner spinner = (Spinner) findViewById(R.id.spinner1);
+		Spinner spinner = (Spinner) findViewById(R.id.shapeSpinner);
 		// Create an ArrayAdapter using the string array and a default spinner layout
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 		        R.array.shelf_shapes, android.R.layout.simple_spinner_item);
@@ -31,7 +40,7 @@ public class GeneralShelfPropertiesActivity extends Activity implements OnItemSe
 		
 		spinner.setOnItemSelectedListener(this);
 		
-		shape = Shape.NULL;
+		shape = null;
 	}
 
 	@Override
@@ -44,30 +53,46 @@ public class GeneralShelfPropertiesActivity extends Activity implements OnItemSe
 	
 	public void nextScreen(View view) {
 		
-    	Intent intent;
+    	Intent intent = null;
     	switch(shape) {
     		case ROUND:
     	    	intent = new Intent(this, RoundShelfPropertiesActivity.class);
-    	    	startActivity(intent);
     	    	break;
     			
     		case SQUARE:
     	    	intent = new Intent(this, SquareShelfPropertiesActivity.class);
-    	    	startActivity(intent);
     	    	break;
 
     		case OVAL:
     	    	intent = new Intent(this, OvalShelfPropertiesActivity.class);
-    	    	startActivity(intent);
     	    	break;
 
     		case RECTANGULAR:
     	    	intent = new Intent(this, RectangularShelfPropertiesActivity.class);
-    	    	startActivity(intent);
     	    	break;
     	    	
     	    default:
     	    	break;
+    	}
+    	
+		Spinner shapeSpinner = (Spinner) findViewById(R.id.shapeSpinner);
+		int shape = shapeSpinner.getSelectedItemPosition();
+
+		EditText weightText = (EditText) findViewById(R.id.weightText);
+		float weight = Float.parseFloat(weightText.getText().toString());
+		
+		EditText loadText = (EditText) findViewById(R.id.loadText);
+		float load = Float.parseFloat(loadText.getText().toString());
+
+    	if (intent != null) {
+    		
+    		intent.putExtras(getIntent());
+    		
+        	intent.putExtra(EXTRA_SHELF_SHAPE, shape);
+        	intent.putExtra(EXTRA_SHELF_WEIGHT, weight);
+        	intent.putExtra(EXTRA_SHELF_LOAD, load);
+
+        	startActivity(intent);
     	}
 	}
 	
@@ -96,6 +121,6 @@ public class GeneralShelfPropertiesActivity extends Activity implements OnItemSe
 
     public void onNothingSelected(AdapterView<?> parent) {
     	
-    	shape = Shape.NULL;
+    	shape = null;
     }
 }

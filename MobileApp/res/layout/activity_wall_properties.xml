@@ -21,7 +21,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/material_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/wall_materials" />
@@ -34,7 +34,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/thicknessText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

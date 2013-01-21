@@ -2,7 +2,10 @@ package de.htw_berlin.ar;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.EditText;
 
 public class RoundShelfPropertiesActivity extends Activity {
 
@@ -19,4 +22,17 @@ public class RoundShelfPropertiesActivity extends Activity {
 		return true;
 	}
 
+	public void nextScreen(View view) {
+		
+		EditText radiusText = (EditText) findViewById(R.id.radiusText);
+		float radius = Float.parseFloat(radiusText.getText().toString());
+		
+    	Intent intent = new Intent(this, RoundShelfPropertiesActivity.class);
+
+    	intent.putExtras(getIntent());
+    		
+       	intent.putExtra(GeneralShelfPropertiesActivity.EXTRA_SHELF_LENGTH, radius);
+
+       	startActivity(intent);
+	}
 }
